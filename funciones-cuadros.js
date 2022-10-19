@@ -9,6 +9,11 @@ function cuadroClick(cuadro) {
     cuadro.classList.replace('border-primary', 'border-success')
     cuadro.classList.replace('border-muted', 'border-success')
 
+    select.value =
+        cuadro.id === 'cuadro1' && '1' ||
+        cuadro.id === 'cuadro2' && '2' ||
+        cuadro.id === 'cuadro3' && '3'
+
     for (let item of cuadros) {
         if (item.id !== cuadro.id) {
             item.classList.replace('border-success', 'border-muted')

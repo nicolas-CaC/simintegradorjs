@@ -3,6 +3,11 @@ function borrar(e) {
     formulario.valor1.value = ''
     formulario.valor2.value = ''
     formulario.opciones.value = ''
+
+    for (let item of cuadros) {
+        item.classList.replace('border-success', 'border-muted')
+        item.ariaChecked = false
+    }
 }
 
 function checkError() {
